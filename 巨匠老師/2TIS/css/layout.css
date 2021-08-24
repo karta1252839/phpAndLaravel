@@ -1,0 +1,116 @@
+@charset "utf-8";
+/* CSS reset & default ======================================================= */
+* { padding:0; margin:0; box-sizing:border-box; }
+:focus { outline:none; }
+img { border:none; vertical-align:middle; }
+html { font-size:15px; }
+body, h1, h2, h3, h4 { letter-spacing:1px; 
+  font-family:Helvetica, Arial, "Microsoft JhengHei", 微軟正黑體, sans-serif; }
+h1, h2, h3, h4 { font-weight:bold; }
+ul,ol,li { list-style:none; margin:0; }
+a { text-decoration:none; display:inline-block; padding:0 3px;
+  color:#0054A4; }
+a:hover { text-decoration:none; color:#9C00E1; }
+
+.container { width:100%; max-width:1200px; margin:0 auto; }
+
+
+/* header ===================================================================== */
+header .container { height:120px; position:relative;
+  background:url(../img_layout/header.png) no-repeat left bottom; }
+
+.login-info, .search-form, .cart-info { position:absolute; }
+.login-info {  right:60px; bottom:10px; z-index:9999; }
+.search-form { left:10px; bottom:8px; }
+.cart-info { right:0; bottom:0; width:50px; height:50px; 
+  background:url(../img_layout/cart.png) right bottom no-repeat; background-size:contain;
+  font-size:20px; text-align:center; font-weight:bold; color:#e54f00; }
+
+@media(max-width:700px){ 
+  .login-info, .search-form, .cart-info { 
+    position:static; padding-left:10px; display:inline-block; vertical-align:middle; }
+  .login-info { display:block; transform:translateY(6px); }
+}
+
+
+/* nav ======================================================================== */
+nav { font-size:16px; font-weight:bold; letter-spacing:0; }
+.w3-grey, .w3-hover-grey:hover {
+  color:#fff!important; background-color:#aaa!important; }
+.w3-button:hover, .w3-button.active { 
+  color:#fff!important; background-color:#000!important; }
+
+nav .w3-bar.show-m { font-size:18px; }
+nav .w3-right:hover, nav .w3-right:active { background-color:#aaa!important; }
+.demo { background-color:#ccc!important; }
+.demo .w3-bar-item { display: block; border-bottom:1px solid #bbb; }
+.show-d { display:none; }
+.show-m { display:block; }
+.demo { display:none; }
+
+@media(min-width:700px){
+  .show-d { display:block; }
+  .show-m { display:none; }
+}
+
+
+/* .main ========================================================================= */
+.main { overflow:hidden; position:relative; padding:20px 0; min-height:300px; }
+.main h1 { 
+  background:url(../img_layout/h1bg.gif) no-repeat center bottom;
+  font-size:24px; text-align:center; margin-bottom:15px; padding-bottom:30px; }
+h2 { color:#B5548A; font-size:16px; text-align:center; padding:0 0 15px 0; }
+h3 { color:#B5548A; font-size:16px; }
+
+
+/* footer ======================================================================== */
+footer { padding:20px 0; text-align:center; border-top:1px solid #999; font-size:12px; }
+
+
+
+
+/* other =========================================================================== */
+.w100p  { width:100%; }
+.w85p   { width:85%; }
+.w60p   { width:60%; }
+
+.w100   { width:100px; }
+.w50    { width:50px; }
+
+.padding5 { padding:5px;}
+.padding15 { padding:15px;}
+
+.marginCenter { margin:0 auto; }
+.floatRight { float:right; }
+.clearBoth { clear:both; }
+.overflowH { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.cursor-p { cursor:pointer; }
+
+
+
+
+/* .pager area ================================================================= */
+.pager { text-align: center; padding: 5px 0; 
+  display: flex; justify-content: space-between; align-items: center; }
+.pager a, .pager span { display:inline-block; padding: 5px 10px; width: 35px; }
+.pager a:hover { background-color: #666; color: #fff; cursor: pointer; }
+.pager .current { color:deeppink; font-size:1.2em; font-weight:bold; cursor: pointer; }
+.pager .spanarea { width: 35px; }
+
+/* 後台管理系統 admin ================================================================= */
+.adminbody .container-fluid { overflow: hidden; }
+.adminbody .index-btn, 
+.adminbody .logout-btn { display:block; padding:10px 20px; color:#999; }
+.adminbody .index-btn { float: left; }
+.adminbody .logout-btn { float: right; }
+.adminbody .index-btn:hover, 
+.adminbody .logout-btn:hover { color:#F00; }
+
+.adminbody header { height:70px; text-align: center; position: relative; }
+.adminbody header a { display:inline-block; max-width: 95%; }
+.adminbody header img {  width: 100%; height: auto; }
+.adminbody .login-info { right: 10px; }
+.adminbody .about-area {
+  background:url(../img_layout/admin_bg.jpg) center; background-size: cover;
+  min-height:500px; width:100%; left:0; bottom:0; position:fixed; z-index:-1;
+}
